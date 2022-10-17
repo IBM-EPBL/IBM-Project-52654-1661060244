@@ -33,7 +33,7 @@ def login():
     if request.method == 'POST':
         name = request.form["username"]
         password = request.form["password"]
-        select_sql = "SELECT * FROM  LDM84139.USER WHERE USERNAME = ? AND PASSWORD = ?"
+        select_sql = "SELECT * FROM  vmj86703.USER WHERE USERNAME = ? AND PASSWORD = ?"
         prep_stmt = ibm_db.prepare(conn, select_sql)
         ibm_db.bind_param(prep_stmt, 1, name)
         ibm_db.bind_param(prep_stmt, 2, password)
